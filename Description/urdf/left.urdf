@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<robot
-  name="wujihand-left-v1.0.0">
+<robot name="wujihand-left-v1.0.0">
+  <!-- Minimal MuJoCo settings - detailed configuration will be in exported XML -->
+  <mujoco>
+    <compiler meshdir="../meshes/left/" balanceinertia="true"/>
+  </mujoco>
   <link
     name="palm_link">
     <inertial>
@@ -11,11 +14,11 @@
         value="0.2179" />
       <inertia
         ixx="0.000185138805675"
-        ixy="-6.9482129085e-07"
-        ixz="6.80761251586e-06"
+        ixy="-6.95e-04"
+        ixz="6.81e-03"
         iyy="0.000122854497279"
-        iyz="1.2724585692e-05"
-        izz="8.31438184624e-05" />
+        iyz="1.27e-02"
+        izz="8.31e-02" />
     </inertial>
     <visual>
       <origin
@@ -23,22 +26,31 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/palm_link.STL" />
+          filename="palm_mask.STL" />
       </geometry>
       <material
         name="">
         <color
           rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
       </material>
+      <!-- MuJoCo visual设置 - 使用组1（可见） -->
+      <class>visual</class>
     </visual>
     <collision>
       <origin
         xyz="0 0 0"
-        rpy="0 0 0" />
+        rpy="1.5708 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/palm_link.STL" />
+          filename="palm_link.STL" />
       </geometry>
+      <!-- MuJoCo collision parameters - 增大palm的margin和gap -->
+      <mu1 value="0.8"/>
+      <mu2 value="0.8"/>
+      <margin value="0.015"/>
+      <gap value="0.012"/>
+      <!-- MuJoCo碰撞设置 - 使用组3（不可见） -->
+      <class>collision</class>
     </collision>
   </link>
   <link
@@ -50,12 +62,12 @@
       <mass
         value="0.0075" />
       <inertia
-        ixx="3.16836704535e-07"
-        ixy="-4.13124324332e-09"
-        ixz="-8.88584300116e-09"
-        iyy="2.83139896489e-07"
-        iyz="-5.67737220481e-08"
-        izz="2.61988168289e-07" />
+        ixx="3.31e-04"
+        ixy="-4.13e-06"
+        ixz="-8.89e-06"
+        iyy="3.17e-04"
+        iyz="-5.68e-05"
+        izz="2.14e-04" />
     </inertial>
     <visual>
       <origin
@@ -63,7 +75,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger1_link1.STL" />
+          filename="finger1_link1.STL" />
       </geometry>
       <material
         name="">
@@ -77,8 +89,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger1_link1.STL" />
+          filename="finger1_link1.STL" />
       </geometry>
+      <!-- MuJoCo collision parameters - 第一指节增加margin和gap -->
+      <margin value="0.006"/>
+      <gap value="0.004"/>
+      <class>collision</class>
     </collision>
   </link>
   <joint
@@ -108,12 +124,12 @@
       <mass
         value="0.0248" />
       <inertia
-        ixx="2.62446906758e-06"
-        ixy="1.82022731462e-08"
-        ixz="-1.15479697231e-08"
-        iyy="2.56280331907e-06"
-        iyz="-8.81509010454e-09"
-        izz="6.79703953945e-07" />
+        ixx="2.63e-04"
+        ixy="1.82e-03"
+        ixz="-1.15e-03"
+        iyy="2.56e-04"
+        iyz="-8.82e-04"
+        izz="6.80e-02" />
     </inertial>
     <visual>
       <origin
@@ -121,7 +137,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger1_link2.STL" />
+          filename="finger1_link2.STL" />
       </geometry>
       <material
         name="">
@@ -135,8 +151,9 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger1_link2.STL" />
+          filename="finger1_link2.STL" />
       </geometry>
+      <class>collision</class>
     </collision>
   </link>
   <joint
@@ -166,12 +183,12 @@
       <mass
         value="0.0165" />
       <inertia
-        ixx="1.42181378628e-06"
-        ixy="-1.19718392222e-11"
-        ixz="-2.21151645335e-08"
-        iyy="1.38852160831e-06"
-        iyz="1.29232825734e-09"
-        izz="4.49726214832e-07" />
+        ixx="1.42e-03"
+        ixy="-1.20e-08"
+        ixz="-2.21e-05"
+        iyy="1.39e-03"
+        iyz="1.29e-06"
+        izz="4.50e-04" />
     </inertial>
     <visual>
       <origin
@@ -179,7 +196,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger1_link3.STL" />
+          filename="finger1_link3.STL" />
       </geometry>
       <material
         name="">
@@ -193,8 +210,9 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger1_link3.STL" />
+          filename="finger1_link3.STL" />
       </geometry>
+      <class>collision</class>
     </collision>
   </link>
   <joint
@@ -224,12 +242,12 @@
       <mass
         value="0.0165" />
       <inertia
-        ixx="7.82759883054e-07"
-        ixy="-2.54045447008e-10"
-        ixz="-1.12975518371e-08"
-        iyy="8.01198229807e-07"
-        iyz="1.9208770804e-09"
-        izz="4.29886103155e-07" />
+        ixx="7.83e-04"
+        ixy="-2.54e-07"
+        ixz="-1.13e-05"
+        iyy="8.01e-04"
+        iyz="1.92e-06"
+        izz="4.30e-04" />
     </inertial>
     <visual>
       <origin
@@ -237,7 +255,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger1_link4.STL" />
+          filename="finger1_link4.STL" />
       </geometry>
       <material
         name="">
@@ -251,8 +269,9 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger1_link4.STL" />
+          filename="finger1_link4.STL" />
       </geometry>
+      <class>collision</class>
     </collision>
   </link>
   <joint
@@ -282,12 +301,12 @@
       <mass
         value="0.004" />
       <inertia
-        ixx="1.18467820552e-07"
-        ixy="2.60808887707e-12"
-        ixz="4.3486647676e-09"
-        iyy="1.17926682658e-07"
-        iyz="-9.30714155046e-13"
-        izz="1.0462656091e-07" />
+        ixx="1.18e-04"
+        ixy="2.61e-09"
+        ixz="4.35e-06"
+        iyy="1.18e-04"
+        iyz="-9.31e-10"
+        izz="1.05e-04" />
     </inertial>
     <visual>
       <origin
@@ -295,7 +314,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger1_tip_link.STL" />
+          filename="finger1_tip_link.STL" />
       </geometry>
       <material
         name="">
@@ -309,8 +328,9 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger1_tip_link.STL" />
+          filename="finger1_tip_link.STL" />
       </geometry>
+      <class>collision</class>
     </collision>
   </link>
   <joint
@@ -340,12 +360,12 @@
       <mass
         value="0.0032" />
       <inertia
-        ixx="8.24635566195e-08"
-        ixy="-3.72075764795e-13"
-        ixz="-2.51469416938e-08"
-        iyy="7.17535314877e-08"
-        iyz="-7.78557739078e-13"
-        izz="7.65578995324e-08" />
+        ixx="8.25e-05"
+        ixy="-3.72e-10"
+        ixz="-2.51e-05"
+        iyy="7.18e-05"
+        iyz="-7.79e-10"
+        izz="7.66e-05" />
     </inertial>
     <visual>
       <origin
@@ -353,7 +373,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger2_link1.STL" />
+          filename="finger2_link1.STL" />
       </geometry>
       <material
         name="">
@@ -367,8 +387,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger2_link1.STL" />
+          filename="finger2_link1.STL" />
       </geometry>
+      <!-- MuJoCo collision parameters - 第一指节增加margin和gap -->
+      <margin value="0.006"/>
+      <gap value="0.004"/>
+      <class>collision</class>
     </collision>
   </link>
   <joint
@@ -398,12 +422,12 @@
       <mass
         value="0.033" />
       <inertia
-        ixx="4.73967795912e-06"
-        ixy="-3.11807034695e-11"
-        ixz="-1.58339823134e-07"
-        iyy="4.76601536991e-06"
-        iyz="2.24782427637e-10"
-        izz="8.75952043437e-07" />
+        ixx="4.74e-03"
+        ixy="-3.12e-08"
+        ixz="-1.58e-04"
+        iyy="4.77e-03"
+        iyz="2.25e-07"
+        izz="8.76e-04" />
     </inertial>
     <visual>
       <origin
@@ -411,7 +435,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger2_link2.STL" />
+          filename="finger2_link2.STL" />
       </geometry>
       <material
         name="">
@@ -425,8 +449,9 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger2_link2.STL" />
+          filename="finger2_link2.STL" />
       </geometry>
+      <class>collision</class>
     </collision>
   </link>
   <joint
@@ -456,12 +481,12 @@
       <mass
         value="0.0165" />
       <inertia
-        ixx="1.45317412511e-06"
-        ixy="-1.72524641194e-11"
-        ixz="3.48327930301e-08"
-        iyy="1.41954641001e-06"
-        iyz="1.25690872853e-09"
-        izz="4.50044444879e-07" />
+        ixx="1.45e-03"
+        ixy="-1.73e-08"
+        ixz="3.48e-05"
+        iyy="1.42e-03"
+        iyz="1.26e-06"
+        izz="4.50e-04" />
     </inertial>
     <visual>
       <origin
@@ -469,7 +494,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger2_link3.STL" />
+          filename="finger2_link3.STL" />
       </geometry>
       <material
         name="">
@@ -483,8 +508,9 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger2_link3.STL" />
+          filename="finger2_link3.STL" />
       </geometry>
+      <class>collision</class>
     </collision>
   </link>
   <joint
@@ -514,12 +540,12 @@
       <mass
         value="0.014" />
       <inertia
-        ixx="5.07105268422e-07"
-        ixy="8.93131570675e-11"
-        ixz="1.62271934308e-08"
-        iyy="3.57636407743e-07"
-        iyz="8.67158555638e-10"
-        izz="4.13131857131e-07" />
+        ixx="5.07e-04"
+        ixy="8.93e-08"
+        ixz="1.62e-05"
+        iyy="3.58e-04"
+        iyz="8.67e-07"
+        izz="4.13e-04" />
     </inertial>
     <visual>
       <origin
@@ -527,7 +553,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger2_link4.STL" />
+          filename="finger2_link4.STL" />
       </geometry>
       <material
         name="">
@@ -541,8 +567,9 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger2_link4.STL" />
+          filename="finger2_link4.STL" />
       </geometry>
+      <class>collision</class>
     </collision>
   </link>
   <joint
@@ -572,12 +599,12 @@
       <mass
         value="0.004" />
       <inertia
-        ixx="1.3345905235e-07"
-        ixy="7.44024656011e-12"
-        ixz="5.04932227663e-09"
-        iyy="1.32215713887e-07"
-        iyz="-3.31667752851e-11"
-        izz="9.81864685781e-08" />
+        ixx="1.33e-04"
+        ixy="7.44e-09"
+        ixz="5.05e-06"
+        iyy="1.32e-04"
+        iyz="-3.32e-08"
+        izz="9.82e-05" />
     </inertial>
     <visual>
       <origin
@@ -585,7 +612,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger2_tip_link.STL" />
+          filename="finger2_tip_link.STL" />
       </geometry>
       <material
         name="">
@@ -599,8 +626,9 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger2_tip_link.STL" />
+          filename="finger2_tip_link.STL" />
       </geometry>
+      <class>collision</class>
     </collision>
   </link>
   <joint
@@ -625,12 +653,12 @@
       <mass
         value="0.0032" />
       <inertia
-        ixx="8.24636623445e-08"
-        ixy="-3.68550167319e-13"
-        ixz="-2.51464575048e-08"
-        iyy="7.17530046013e-08"
-        iyz="-9.85035740953e-13"
-        izz="7.65566461538e-08" />
+        ixx="8.25e-05"
+        ixy="-3.69e-10"
+        ixz="-2.51e-05"
+        iyy="7.18e-05"
+        iyz="-9.85e-10"
+        izz="7.66e-05" />
     </inertial>
     <visual>
       <origin
@@ -638,7 +666,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger3_link1.STL" />
+          filename="finger3_link1.STL" />
       </geometry>
       <material
         name="">
@@ -652,8 +680,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger3_link1.STL" />
+          filename="finger3_link1.STL" />
       </geometry>
+      <!-- MuJoCo collision parameters - 第一指节增加margin和gap -->
+      <margin value="0.006"/>
+      <gap value="0.004"/>
+      <class>collision</class>
     </collision>
   </link>
   <joint
@@ -683,12 +715,12 @@
       <mass
         value="0.033" />
       <inertia
-        ixx="4.73968064697e-06"
-        ixy="-3.07046544515e-11"
-        ixz="-1.58340413087e-07"
-        iyy="4.76601417054e-06"
-        iyz="2.26142647941e-10"
-        izz="8.75951769067e-07" />
+        ixx="4.74e-03"
+        ixy="-3.07e-08"
+        ixz="-1.58e-04"
+        iyy="4.77e-03"
+        iyz="2.26e-07"
+        izz="8.76e-04" />
     </inertial>
     <visual>
       <origin
@@ -696,7 +728,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger3_link2.STL" />
+          filename="finger3_link2.STL" />
       </geometry>
       <material
         name="">
@@ -710,8 +742,9 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger3_link2.STL" />
+          filename="finger3_link2.STL" />
       </geometry>
+      <class>collision</class>
     </collision>
   </link>
   <joint
@@ -741,12 +774,12 @@
       <mass
         value="0.0165" />
       <inertia
-        ixx="1.45317495538e-06"
-        ixy="-1.40871096453e-11"
-        ixz="3.48282114561e-08"
-        iyy="1.41954591592e-06"
-        iyz="1.25836064618e-09"
-        izz="4.50044542549e-07" />
+        ixx="1.45e-03"
+        ixy="-1.41e-08"
+        ixz="3.48e-05"
+        iyy="1.42e-03"
+        iyz="1.26e-06"
+        izz="4.50e-04" />
     </inertial>
     <visual>
       <origin
@@ -754,7 +787,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger3_link3.STL" />
+          filename="finger3_link3.STL" />
       </geometry>
       <material
         name="">
@@ -768,8 +801,9 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger3_link3.STL" />
+          filename="finger3_link3.STL" />
       </geometry>
+      <class>collision</class>
     </collision>
   </link>
   <joint
@@ -799,12 +833,12 @@
       <mass
         value="0.014" />
       <inertia
-        ixx="5.07103828894e-07"
-        ixy="8.95184177451e-11"
-        ixz="1.6227808191e-08"
-        iyy="3.57638960551e-07"
-        iyz="8.66474733263e-10"
-        izz="4.13132574523e-07" />
+        ixx="5.07e-04"
+        ixy="8.95e-08"
+        ixz="1.62e-05"
+        iyy="3.58e-04"
+        iyz="8.66e-07"
+        izz="4.13e-04" />
     </inertial>
     <visual>
       <origin
@@ -812,7 +846,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger3_link4.STL" />
+          filename="finger3_link4.STL" />
       </geometry>
       <material
         name="">
@@ -826,8 +860,9 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger3_link4.STL" />
+          filename="finger3_link4.STL" />
       </geometry>
+      <class>collision</class>
     </collision>
   </link>
   <joint
@@ -857,12 +892,12 @@
       <mass
         value="0.004" />
       <inertia
-        ixx="1.33478444034e-07"
-        ixy="7.04789571466e-12"
-        ixz="5.05043953967e-09"
-        iyy="1.32227512883e-07"
-        iyz="-3.37140151502e-11"
-        izz="9.81809248896e-08" />
+        ixx="1.33e-04"
+        ixy="7.05e-09"
+        ixz="5.05e-06"
+        iyy="1.32e-04"
+        iyz="-3.37e-08"
+        izz="9.82e-05" />
     </inertial>
     <visual>
       <origin
@@ -870,7 +905,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger3_tip_link.STL" />
+          filename="finger3_tip_link.STL" />
       </geometry>
       <material
         name="">
@@ -884,8 +919,9 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger3_tip_link.STL" />
+          filename="finger3_tip_link.STL" />
       </geometry>
+      <class>collision</class>
     </collision>
   </link>
   <joint
@@ -910,12 +946,12 @@
       <mass
         value="0.0032" />
       <inertia
-        ixx="8.24337318761e-08"
-        ixy="-3.49338535909e-13"
-        ixz="-2.51498608849e-08"
-        iyy="7.17531542116e-08"
-        iyz="-7.21199781337e-13"
-        izz="7.65873788941e-08" />
+        ixx="8.24e-05"
+        ixy="-3.49e-10"
+        ixz="-2.51e-05"
+        iyy="7.18e-05"
+        iyz="-7.21e-10"
+        izz="7.66e-05" />
     </inertial>
     <visual>
       <origin
@@ -923,7 +959,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger4_link1.STL" />
+          filename="finger4_link1.STL" />
       </geometry>
       <material
         name="">
@@ -937,8 +973,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger4_link1.STL" />
+          filename="finger4_link1.STL" />
       </geometry>
+      <!-- MuJoCo collision parameters - 第一指节增加margin和gap -->
+      <margin value="0.006"/>
+      <gap value="0.004"/>
+      <class>collision</class>
     </collision>
   </link>
   <joint
@@ -968,12 +1008,12 @@
       <mass
         value="0.033" />
       <inertia
-        ixx="4.73967932335e-06"
-        ixy="-3.19055949822e-11"
-        ixz="-1.58338650037e-07"
-        iyy="4.7660130756e-06"
-        iyz="2.24551079646e-10"
-        izz="8.75952172595e-07" />
+        ixx="4.74e-03"
+        ixy="-3.19e-08"
+        ixz="-1.58e-04"
+        iyy="4.77e-03"
+        iyz="2.25e-07"
+        izz="8.76e-04" />
     </inertial>
     <visual>
       <origin
@@ -981,7 +1021,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger4_link2.STL" />
+          filename="finger4_link2.STL" />
       </geometry>
       <material
         name="">
@@ -995,8 +1035,9 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger4_link2.STL" />
+          filename="finger4_link2.STL" />
       </geometry>
+      <class>collision</class>
     </collision>
   </link>
   <joint
@@ -1026,12 +1067,12 @@
       <mass
         value="0.0165" />
       <inertia
-        ixx="1.45317476293e-06"
-        ixy="-1.3940071133e-11"
-        ixz="3.48276052015e-08"
-        iyy="1.41954491255e-06"
-        iyz="1.25846201833e-09"
-        izz="4.50044416702e-07" />
+        ixx="1.45e-03"
+        ixy="-1.39e-08"
+        ixz="3.48e-05"
+        iyy="1.42e-03"
+        iyz="1.26e-06"
+        izz="4.50e-04" />
     </inertial>
     <visual>
       <origin
@@ -1039,7 +1080,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger4_link3.STL" />
+          filename="finger4_link3.STL" />
       </geometry>
       <material
         name="">
@@ -1053,8 +1094,9 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger4_link3.STL" />
+          filename="finger4_link3.STL" />
       </geometry>
+      <class>collision</class>
     </collision>
   </link>
   <joint
@@ -1084,12 +1126,12 @@
       <mass
         value="0.014" />
       <inertia
-        ixx="5.07103424765e-07"
-        ixy="9.03840379964e-11"
-        ixz="1.62275438466e-08"
-        iyy="3.57638520179e-07"
-        iyz="8.66153928949e-10"
-        izz="4.13132587214e-07" />
+        ixx="5.07e-04"
+        ixy="9.04e-08"
+        ixz="1.62e-05"
+        iyy="3.58e-04"
+        iyz="8.66e-07"
+        izz="4.13e-04" />
     </inertial>
     <visual>
       <origin
@@ -1097,7 +1139,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger4_link4.STL" />
+          filename="finger4_link4.STL" />
       </geometry>
       <material
         name="">
@@ -1111,8 +1153,9 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger4_link4.STL" />
+          filename="finger4_link4.STL" />
       </geometry>
+      <class>collision</class>
     </collision>
   </link>
   <joint
@@ -1142,12 +1185,12 @@
       <mass
         value="0.004" />
       <inertia
-        ixx="1.33453433216e-07"
-        ixy="7.76622639435e-12"
-        ixz="5.06997229161e-09"
-        iyy="1.32217509093e-07"
-        iyz="-3.3429571928e-11"
-        izz="9.81920155956e-08" />
+        ixx="1.33e-04"
+        ixy="7.77e-09"
+        ixz="5.07e-06"
+        iyy="1.32e-04"
+        iyz="-3.34e-08"
+        izz="9.82e-05" />
     </inertial>
     <visual>
       <origin
@@ -1155,7 +1198,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger4_tip_link.STL" />
+          filename="finger4_tip_link.STL" />
       </geometry>
       <material
         name="">
@@ -1169,8 +1212,9 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger4_tip_link.STL" />
+          filename="finger4_tip_link.STL" />
       </geometry>
+      <class>collision</class>
     </collision>
   </link>
   <joint
@@ -1195,12 +1239,12 @@
       <mass
         value="0.0032" />
       <inertia
-        ixx="8.24251622414e-08"
-        ixy="-1.44806235779e-13"
-        ixz="-2.51504481145e-08"
-        iyy="7.17523201046e-08"
-        iyz="-7.53706636582e-13"
-        izz="7.65940795995e-08" />
+        ixx="8.24e-05"
+        ixy="-1.45e-10"
+        ixz="-2.52e-05"
+        iyy="7.18e-05"
+        iyz="-7.54e-10"
+        izz="7.66e-05" />
     </inertial>
     <visual>
       <origin
@@ -1208,7 +1252,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger5_link1.STL" />
+          filename="finger5_link1.STL" />
       </geometry>
       <material
         name="">
@@ -1222,8 +1266,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger5_link1.STL" />
+          filename="finger5_link1.STL" />
       </geometry>
+      <!-- MuJoCo collision parameters - 第一指节增加margin和gap -->
+      <margin value="0.006"/>
+      <gap value="0.004"/>
+      <class>collision</class>
     </collision>
   </link>
   <joint
@@ -1253,12 +1301,12 @@
       <mass
         value="0.033" />
       <inertia
-        ixx="4.73967668648e-06"
-        ixy="-3.39485808115e-11"
-        ixz="-1.58335687406e-07"
-        iyy="4.76601174255e-06"
-        iyz="2.21620251382e-10"
-        izz="8.75952911332e-07" />
+        ixx="4.74e-03"
+        ixy="-3.39e-08"
+        ixz="-1.58e-04"
+        iyy="4.77e-03"
+        iyz="2.22e-07"
+        izz="8.76e-04" />
     </inertial>
     <visual>
       <origin
@@ -1266,7 +1314,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger5_link2.STL" />
+          filename="finger5_link2.STL" />
       </geometry>
       <material
         name="">
@@ -1280,8 +1328,9 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger5_link2.STL" />
+          filename="finger5_link2.STL" />
       </geometry>
+      <class>collision</class>
     </collision>
   </link>
   <joint
@@ -1311,12 +1360,12 @@
       <mass
         value="0.0165" />
       <inertia
-        ixx="1.45317454392e-06"
-        ixy="-1.51899132926e-11"
-        ixz="3.48287740042e-08"
-        iyy="1.41954366277e-06"
-        iyz="1.25873924155e-09"
-        izz="4.50044433741e-07" />
+        ixx="1.45e-03"
+        ixy="-1.52e-08"
+        ixz="3.48e-05"
+        iyy="1.42e-03"
+        iyz="1.26e-06"
+        izz="4.50e-04" />
     </inertial>
     <visual>
       <origin
@@ -1324,7 +1373,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger5_link3.STL" />
+          filename="finger5_link3.STL" />
       </geometry>
       <material
         name="">
@@ -1338,8 +1387,9 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger5_link3.STL" />
+          filename="finger5_link3.STL" />
       </geometry>
+      <class>collision</class>
     </collision>
   </link>
   <joint
@@ -1369,12 +1419,12 @@
       <mass
         value="0.014" />
       <inertia
-        ixx="5.07104099498e-07"
-        ixy="9.10302557793e-11"
-        ixz="1.62271434197e-08"
-        iyy="3.57637347216e-07"
-        iyz="8.66254530581e-10"
-        izz="4.13132323205e-07" />
+        ixx="5.07e-04"
+        ixy="9.10e-08"
+        ixz="1.62e-05"
+        iyy="3.58e-04"
+        iyz="8.66e-07"
+        izz="4.13e-04" />
     </inertial>
     <visual>
       <origin
@@ -1382,7 +1432,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger5_link4.STL" />
+          filename="finger5_link4.STL" />
       </geometry>
       <material
         name="">
@@ -1396,8 +1446,9 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger5_link4.STL" />
+          filename="finger5_link4.STL" />
       </geometry>
+      <class>collision</class>
     </collision>
   </link>
   <joint
@@ -1427,12 +1478,12 @@
       <mass
         value="0.004" />
       <inertia
-        ixx="1.33452017771e-07"
-        ixy="7.77363850292e-12"
-        ixz="5.07478347697e-09"
-        iyy="1.32217603867e-07"
-        iyz="-3.33232708686e-11"
-        izz="9.81933676129e-08" />
+        ixx="1.33e-04"
+        ixy="7.77e-09"
+        ixz="5.07e-06"
+        iyy="1.32e-04"
+        iyz="-3.33e-08"
+        izz="9.82e-05" />
     </inertial>
     <visual>
       <origin
@@ -1440,7 +1491,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger5_tip_link.STL" />
+          filename="finger5_tip_link.STL" />
       </geometry>
       <material
         name="">
@@ -1454,8 +1505,9 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://wujihand-urdf/meshes/left/finger5_tip_link.STL" />
+          filename="finger5_tip_link.STL" />
       </geometry>
+      <class>collision</class>
     </collision>
   </link>
   <joint
