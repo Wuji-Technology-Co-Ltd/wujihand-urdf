@@ -5,11 +5,11 @@ palm_link:
       via:
         joint: finger1_joint1
         limit:
-          lower: -0.0448
-          upper: 1.6508
+          lower: -1.6508
+          upper: 0.0448
           effort: 0.6
-          velocity: 8.58701992
-        axis_world: [0, 0, 1]
+          velocity: 8.587
+        axis_world: [0.22, 0.36, -0.90]
       mass: 0.0075
       children:
         finger1_link2:
@@ -19,8 +19,8 @@ palm_link:
               lower: -0.1659
               upper: 0.9339
               effort: 0.6
-              velocity: 11.10029404
-            axis_world: [-1, 0, 0]
+              velocity: 11.1
+            axis_world: [-0.57, -0.74, -0.36]
           mass: 0.0248
           children:
             finger1_link3:
@@ -30,8 +30,8 @@ palm_link:
                   lower: -0.4932
                   upper: 1.6272
                   effort: 0.3
-                  velocity: 12.86307659
-                axis_world: [0, 0, 1]
+                  velocity: 12.863
+                axis_world: [-0.71, -0.23, 0.67]
               mass: 0.0165
               children:
                 finger1_link4:
@@ -41,24 +41,23 @@ palm_link:
                       lower: -0.4932
                       upper: 1.6272
                       effort: 0.3
-                      velocity: 13.57866158
-                    axis_world: [0, 0, 1]
+                      velocity: 13.579
+                    axis_world: [-0.71, -0.23, 0.67]
                   mass: 0.0165
                   children:
                     finger1_tip_link:
                       via:
                         joint: finger1_tip_fixed
                       mass: 0.004
-
     finger2_link1:
       via:
         joint: finger2_joint1
         limit:
           lower: -0.32695
-          upper: 1.63595
+          upper: 1.636
           effort: 1.0
-          velocity: 8.203047484
-        axis_world: [0, 1, 0]
+          velocity: 8.203
+        axis_world: [-0.22, 0.97, -0.09]
       mass: 0.0032
       children:
         finger2_link2:
@@ -68,46 +67,45 @@ palm_link:
               lower: -0.495
               upper: 0.495
               effort: 0.2
-              velocity: 8.115781022
-            axis_world: [-1, 0, 0]
+              velocity: 8.1158
+            axis_world: [0.22, -0.97, 0.09]
           mass: 0.033
           children:
             finger2_link3:
               via:
                 joint: finger2_joint3
                 limit:
-                  lower: -0.4932
-                  upper: 1.6272
+                  lower: -1.6272
+                  upper: 0.4932
                   effort: 0.3
-                  velocity: 12.86307659
-                axis_world: [0, 1, 0]
+                  velocity: 12.863
+                axis_world: [-0.11, 0.07, 0.99]
               mass: 0.0165
               children:
                 finger2_link4:
                   via:
                     joint: finger2_joint4
                     limit:
-                      lower: -0.4932
-                      upper: 1.6272
+                      lower: -1.6272
+                      upper: 0.4932
                       effort: 0.3
-                      velocity: 13.57866158
-                    axis_world: [0, 1, 0]
+                      velocity: 13.579
+                    axis_world: [-0.11, 0.07, 0.99]
                   mass: 0.014
                   children:
                     finger2_tip_link:
                       via:
                         joint: finger2_tip_fixed
                       mass: 0.004
-
     finger3_link1:
       via:
         joint: finger3_joint1
         limit:
-          lower: -0.32695
-          upper: 1.63595
+          lower: -1.63595
+          upper: 0.32695
           effort: 1.0
-          velocity: 8.203047484
-        axis_world: [0, 1, 0]
+          velocity: 8.203
+        axis_world: [0.00, -1.00, 0.09]
       mass: 0.0032
       children:
         finger3_link2:
@@ -117,46 +115,45 @@ palm_link:
               lower: -0.495
               upper: 0.495
               effort: 0.2
-              velocity: 8.115781022
-            axis_world: [-1, 0, 0]
+              velocity: 8.115
+            axis_world: [0.00, 1.00, -0.09]
           mass: 0.033
           children:
             finger3_link3:
               via:
                 joint: finger3_joint3
                 limit:
-                  lower: -0.4932
-                  upper: 1.6272
+                  lower: -1.6272
+                  upper: 0.4932
                   effort: 0.3
-                  velocity: 12.86307659
-                axis_world: [0, 1, 0]
+                  velocity: 12.863
+                axis_world: [0.00, 0.09, 1.00]
               mass: 0.0165
               children:
                 finger3_link4:
                   via:
                     joint: finger3_joint4
                     limit:
-                      lower: -0.4932
-                      upper: 1.6272
+                      lower: -1.6272
+                      upper: 0.4932
                       effort: 0.3
-                      velocity: 13.57866158
-                    axis_world: [0, 1, 0]
+                      velocity: 13.579
+                    axis_world: [0.00, 0.09, 1.00]
                   mass: 0.014
                   children:
                     finger3_tip_link:
                       via:
                         joint: finger3_tip_fixed
                       mass: 0.004
-
     finger4_link1:
       via:
         joint: finger4_joint1
         limit:
-          lower: -0.32695
-          upper: 1.63595
+          lower: -1.63595
+          upper: 0.32695
           effort: 1.0
-          velocity: 8.203047484
-        axis_world: [0, 1, 0]
+          velocity: 8.203
+        axis_world: [-0.05, -0.99, 0.09]
       mass: 0.0032
       children:
         finger4_link2:
@@ -166,46 +163,45 @@ palm_link:
               lower: -0.495
               upper: 0.495
               effort: 0.2
-              velocity: 8.115781022
-            axis_world: [-1, 0, 0]
+              velocity: 8.1158
+            axis_world: [0.05, 0.99, -0.09]
           mass: 0.033
           children:
             finger4_link3:
               via:
                 joint: finger4_joint3
                 limit:
-                  lower: -0.4932
-                  upper: 1.6272
+                  lower: -1.6272
+                  upper: 0.4932
                   effort: 0.3
-                  velocity: 12.86307659
-                axis_world: [0, 1, 0]
+                  velocity: 12.863
+                axis_world: [0.09, 0.08, 0.99]
               mass: 0.0165
               children:
                 finger4_link4:
                   via:
                     joint: finger4_joint4
                     limit:
-                      lower: -0.4932
-                      upper: 1.6272
+                      lower: -1.6272
+                      upper: 0.4932
                       effort: 0.3
-                      velocity: 13.57866158
-                    axis_world: [0, 1, 0]
+                      velocity: 13.579
+                    axis_world: [0.09, 0.08, 0.99]
                   mass: 0.014
                   children:
                     finger4_tip_link:
                       via:
                         joint: finger4_tip_fixed
                       mass: 0.004
-
     finger5_link1:
       via:
         joint: finger5_joint1
         limit:
           lower: -0.32695
-          upper: 1.63595
+          upper: 1.636
           effort: 1.0
-          velocity: 8.203047484
-        axis_world: [0, 1, 0]
+          velocity: 8.203
+        axis_world: [0.17, 0.98, -0.13]
       mass: 0.0032
       children:
         finger5_link2:
@@ -215,19 +211,19 @@ palm_link:
               lower: -0.495
               upper: 0.495
               effort: 0.2
-              velocity: 8.115781022
-            axis_world: [-1, 0, 0]
+              velocity: 8.1158
+            axis_world: [0.17, 0.98, -0.13]
           mass: 0.033
           children:
             finger5_link3:
               via:
                 joint: finger5_joint3
                 limit:
-                  lower: -0.4932
-                  upper: 1.6272
+                  lower: -1.6272
+                  upper: 0.4932
                   effort: 0.3
-                  velocity: 12.86307659
-                axis_world: [0, 1, 0]
+                  velocity: 12.863
+                axis_world: [-0.18, -0.09, -0.98]
               mass: 0.0165
               children:
                 finger5_link4:
@@ -237,8 +233,8 @@ palm_link:
                       lower: -0.4932
                       upper: 1.6272
                       effort: 0.3
-                      velocity: 13.57866158
-                    axis_world: [0, 1, 0]
+                      velocity: 13.579
+                    axis_world: [0.18, 0.09, 0.98]
                   mass: 0.014
                   children:
                     finger5_tip_link:
