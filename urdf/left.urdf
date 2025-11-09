@@ -28,7 +28,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -68,7 +68,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -92,10 +92,10 @@
     <child
       link="finger1_link1" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
-      lower="-1.6508"
-      upper="0.0448"
+      lower="-0.0448"
+      upper="1.6508"
       effort="0.6"
       velocity="8.587" />
   </joint>
@@ -126,7 +126,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -184,7 +184,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -242,7 +242,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -300,7 +300,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -353,7 +353,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -411,7 +411,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -435,7 +435,7 @@
     <child
       link="finger2_link2" />
     <axis
-      xyz="0 0 1" />
+      xyz="0 0 -1" />
     <limit
       lower="-0.495"
       upper="0.495"
@@ -469,7 +469,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -493,10 +493,10 @@
     <child
       link="finger2_link3" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
-      lower="-1.6272"
-      upper="0.4932"
+      lower="-0.4932"
+      upper="1.6272"
       effort="0.3"
       velocity="12.863" />
   </joint>
@@ -527,7 +527,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -551,10 +551,10 @@
     <child
       link="finger2_link4" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
-      lower="-1.6272"
-      upper="0.4932"
+      lower="-0.4932"
+      upper="1.6272"
       effort="0.3"
       velocity="13.579" />
   </joint>
@@ -585,7 +585,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -638,7 +638,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -662,10 +662,10 @@
     <child
       link="finger3_link1" />
     <axis
-      xyz="-1 0 0" />
+      xyz="1 0 0" />
     <limit
-      lower="-1.63595"
-      upper="0.32695"
+      lower="-0.32695"
+      upper="1.63595"
       effort="1"
       velocity="8.203" />
   </joint>
@@ -696,7 +696,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -754,7 +754,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -778,10 +778,10 @@
     <child
       link="finger3_link3" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
-      lower="-1.6272"
-      upper="0.4932"
+      lower="-0.4932"
+      upper="1.6272"
       effort="0.3"
       velocity="12.863" />
   </joint>
@@ -812,7 +812,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -836,10 +836,10 @@
     <child
       link="finger3_link4" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
-      lower="-1.6272"
-      upper="0.4932"
+      lower="-0.4932"
+      upper="1.6272"
       effort="0.3"
       velocity="13.579" />
   </joint>
@@ -870,7 +870,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -923,7 +923,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -947,10 +947,10 @@
     <child
       link="finger4_link1" />
     <axis
-      xyz="-1 0 0" />
+      xyz="1 0 0" />
     <limit
-      lower="-1.63595"
-      upper="0.32695"
+      lower="-0.32695"
+      upper="1.63595"
       effort="1"
       velocity="8.203" />
   </joint>
@@ -981,7 +981,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -1039,7 +1039,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -1063,10 +1063,10 @@
     <child
       link="finger4_link3" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
-      lower="-1.6272"
-      upper="0.4932"
+      lower="-0.4932"
+      upper="1.6272"
       effort="0.3"
       velocity="12.863" />
   </joint>
@@ -1097,7 +1097,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -1121,10 +1121,10 @@
     <child
       link="finger4_link4" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
-      lower="-1.6272"
-      upper="0.4932"
+      lower="-0.4932"
+      upper="1.6272"
       effort="0.3"
       velocity="13.579" />
   </joint>
@@ -1155,7 +1155,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -1208,7 +1208,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -1266,7 +1266,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -1324,7 +1324,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -1348,10 +1348,10 @@
     <child
       link="finger5_link3" />
     <axis
-      xyz="0 0 -1" />
+      xyz="0 0 1" />
     <limit
-      lower="-1.6272"
-      upper="0.4932"
+      lower="-0.4932"
+      upper="1.6272"
       effort="0.3"
       velocity="12.863" />
   </joint>
@@ -1382,7 +1382,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>
@@ -1440,7 +1440,7 @@
       <material
         name="">
         <color
-          rgba="0.52941 0.54902 0.54902 1" />
+          rgba="0.89804 0.91765 0.92941 1" />
       </material>
     </visual>
     <collision>

@@ -92,12 +92,12 @@
     <child
       link="finger1_link1" />
     <axis
-      xyz="0 -1 0" />
+      xyz="-0 1 -0" />
     <limit
-      lower="-1.6508"
-      upper="0.0448"
+      lower="-0.0448"
+      upper="1.6508"
       effort="0.6"
-      velocity="8.587" />
+      velocity="8.58701992" />
   </joint>
   <link
     name="finger1_link2">
@@ -150,12 +150,12 @@
     <child
       link="finger1_link2" />
     <axis
-      xyz="0 1 0" />
+      xyz="-0 -1 -0" />
     <limit
-      lower="-0.9339"
-      upper="0.1659"
+      lower="-0.1659"
+      upper="0.9339"
       effort="0.6"
-      velocity="11.1" />
+      velocity="11.10029404" />
   </joint>
   <link
     name="finger1_link3">
@@ -213,7 +213,7 @@
       lower="-0.4932"
       upper="1.6272"
       effort="0.3"
-      velocity="12.863" />
+      velocity="12.86307659" />
   </joint>
   <link
     name="finger1_link4">
@@ -271,7 +271,7 @@
       lower="-0.4932"
       upper="1.6272"
       effort="0.3"
-      velocity="13.579" />
+      velocity="13.57866158" />
   </joint>
   <link
     name="finger1_tip_link">
@@ -380,9 +380,9 @@
       xyz="0 1 0" />
     <limit
       lower="-0.32695"
-      upper="1.636"
+      upper="1.63595"
       effort="1"
-      velocity="8.203" />
+      velocity="8.203047484" />
   </joint>
   <link
     name="finger2_link2">
@@ -440,7 +440,7 @@
       lower="-0.495"
       upper="0.495"
       effort="0.2"
-      velocity="8.1158" />
+      velocity="8.115781022" />
   </joint>
   <link
     name="finger2_link3">
@@ -493,12 +493,12 @@
     <child
       link="finger2_link3" />
     <axis
-      xyz="0 -1 0" />
+      xyz="-0 1 -0" />
     <limit
-      lower="-1.6272"
-      upper="0.4932"
+      lower="-0.4932"
+      upper="1.6272"
       effort="0.3"
-      velocity="12.863" />
+      velocity="12.86307659" />
   </joint>
   <link
     name="finger2_link4">
@@ -551,12 +551,12 @@
     <child
       link="finger2_link4" />
     <axis
-      xyz="0 -1 0" />
+      xyz="-0 1 -0" />
     <limit
-      lower="-1.6272"
-      upper="0.4932"
+      lower="-0.4932"
+      upper="1.6272"
       effort="0.3"
-      velocity="13.579" />
+      velocity="13.57866158" />
   </joint>
   <link
     name="finger2_tip_link">
@@ -665,9 +665,9 @@
       xyz="0 1 0" />
     <limit
       lower="-0.32695"
-      upper="1.636"
+      upper="1.63595"
       effort="1"
-      velocity="8.203" />
+      velocity="8.203047484" />
   </joint>
   <link
     name="finger3_link2">
@@ -725,7 +725,7 @@
       lower="-0.495"
       upper="0.495"
       effort="0.2"
-      velocity="8.1158" />
+      velocity="8.115781022" />
   </joint>
   <link
     name="finger3_link3">
@@ -778,12 +778,12 @@
     <child
       link="finger3_link3" />
     <axis
-      xyz="0 -1 0" />
+      xyz="-0 1 -0" />
     <limit
-      lower="-1.6272"
-      upper="0.4932"
+      lower="-0.4932"
+      upper="1.6272"
       effort="0.3"
-      velocity="12.863" />
+      velocity="12.86307659" />
   </joint>
   <link
     name="finger3_link4">
@@ -836,12 +836,12 @@
     <child
       link="finger3_link4" />
     <axis
-      xyz="0 -1 0" />
+      xyz="-0 1 -0" />
     <limit
-      lower="-1.6272"
-      upper="0.4932"
+      lower="-0.4932"
+      upper="1.6272"
       effort="0.3"
-      velocity="13.579" />
+      velocity="13.57866158" />
   </joint>
   <link
     name="finger3_tip_link">
@@ -947,12 +947,12 @@
     <child
       link="finger4_link1" />
     <axis
-      xyz="0 -1 0" />
+      xyz="-0 1 -0" />
     <limit
-      lower="-1.63595"
-      upper="0.32695"
+      lower="-0.32695"
+      upper="1.63595"
       effort="1"
-      velocity="8.203" />
+      velocity="8.203047484" />
   </joint>
   <link
     name="finger4_link2">
@@ -1010,7 +1010,7 @@
       lower="-0.495"
       upper="0.495"
       effort="0.2"
-      velocity="8.1158" />
+      velocity="8.115781022" />
   </joint>
   <link
     name="finger4_link3">
@@ -1063,12 +1063,12 @@
     <child
       link="finger4_link3" />
     <axis
-      xyz="0 -1 0" />
+      xyz="-0 1 -0" />
     <limit
-      lower="-1.6272"
-      upper="0.4932"
+      lower="-0.4932"
+      upper="1.6272"
       effort="0.3"
-      velocity="12.863" />
+      velocity="12.86307659" />
   </joint>
   <link
     name="finger4_link4">
@@ -1121,12 +1121,12 @@
     <child
       link="finger4_link4" />
     <axis
-      xyz="0 -1 0" />
+      xyz="-0 1 -0" />
     <limit
-      lower="-1.6272"
-      upper="0.4932"
+      lower="-0.4932"
+      upper="1.6272"
       effort="0.3"
-      velocity="13.579" />
+      velocity="13.57866158" />
   </joint>
   <link
     name="finger4_tip_link">
@@ -1235,9 +1235,9 @@
       xyz="0 1 0" />
     <limit
       lower="-0.32695"
-      upper="1.636"
+      upper="1.63595"
       effort="1"
-      velocity="8.203" />
+      velocity="8.203047484" />
   </joint>
   <link
     name="finger5_link2">
@@ -1295,7 +1295,7 @@
       lower="-0.495"
       upper="0.495"
       effort="0.2"
-      velocity="8.1158" />
+      velocity="8.115781022" />
   </joint>
   <link
     name="finger5_link3">
@@ -1348,12 +1348,12 @@
     <child
       link="finger5_link3" />
     <axis
-      xyz="0 -1 0" />
+      xyz="-0 1 -0" />
     <limit
-      lower="-1.6272"
-      upper="0.4932"
+      lower="-0.4932"
+      upper="1.6272"
       effort="0.3"
-      velocity="12.863" />
+      velocity="12.86307659" />
   </joint>
   <link
     name="finger5_link4">
@@ -1406,12 +1406,12 @@
     <child
       link="finger5_link4" />
     <axis
-      xyz="0 -1 0" />
+      xyz="-0 1 -0" />
     <limit
-      lower="-1.6272"
-      upper="0.4932"
+      lower="-0.4932"
+      upper="1.6272"
       effort="0.3"
-      velocity="13.579" />
+      velocity="13.57866158" />
   </joint>
   <link
     name="finger5_tip_link">
